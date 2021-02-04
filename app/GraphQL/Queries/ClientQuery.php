@@ -4,12 +4,13 @@ namespace App\GraphQL\Queries;
 
 use Closure;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Client;
 use GraphQL\Type\Definition\Type;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\Query;
 use Rebing\GraphQL\Support\Facades\GraphQL;
-use Illuminate\Support\Facades\Auth;
+
 
 class ClientQuery extends Query
 {
@@ -39,7 +40,7 @@ class ClientQuery extends Query
 
     public function getAuthorizationMessage(): string
     {
-        return 'You are not authorized to perform this action';
+        return 'Error conectando al servicio, token no proporcionado';
     }
 
 

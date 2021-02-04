@@ -22,6 +22,11 @@ class LoginUserMutation extends Mutation
         return GraphQL::type('Token');
     }
 
+    public function getAuthorizationMessage(): string
+    {
+        return 'Error conectando al servicio, token no proporcionado';
+    }
+
     public function args(): array
     {
         return [
