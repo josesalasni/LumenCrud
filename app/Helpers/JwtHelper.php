@@ -7,7 +7,7 @@ class JwtHelper
     //Add this method to the Controller class
     protected function respondWithToken($user)
     {
-
+        /*
         if (! $token = Auth::attempt($user)) {
             throw new Exception("Unathorized", 401);
         }
@@ -17,5 +17,6 @@ class JwtHelper
           'token_type' => 'bearer',
           'expires_in' => Auth::factory()->getTTL() * 60
         ], 200);
+        */
     }
 }
